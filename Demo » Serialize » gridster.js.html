@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://gridster.net/demos/serialize.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Demo » Serialize » gridster.js</title>
+  <link rel="stylesheet" type="text/css" href="./Demo » Serialize » gridster.js_files/jquery.gridster.css">
+  <link rel="stylesheet" type="text/css" href="./Demo » Serialize » gridster.js_files/demo.css">
+  <script type="text/javascript" src="./Demo » Serialize » gridster.js_files/jquery.js"></script>
+  <script src="./Demo » Serialize » gridster.js_files/jquery.gridster.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+		
+/*$(window).ready(function(){
+		
+				var serialization = JSON.parse(localStorage.getItem('positions'));
+				var bg_size = JSON.parse(localStorage.getItem('bg_size'));
+				//console.log(serialization);
+				if(serialization!=null){
+						//gridster.remove_all_widgets();
+						$("#00").width(bg_size[0]);
+						$("#00").height(bg_size[1]);
+						$.each(serialization, function(i,value){
+						var id_name;
+						id_name="#";
+						id_name = id_name + value.id;
+						//console.log(id_name);
+						//gridster.add_widget('<li />', this.size_x, this.size_y, this.col, this.row, );
+						
+					$(id_name).attr({
+								"data-col":value.col, 
+								"data-row":value.row, 
+								"data-sizex":value.size_x, 
+								"data-sizey":value.size_y,
+								}).html(value.htmlContent);
+			
+
+						});
+						
+ 
+				}
+				else{
+						console.log('No data returned by the server');	
+				}
+});*/
+
+</script>
+	
+  <style type="text/css">
+    #log {
+        display: block;
+        width: 100%;
+        height: 20px;
+        margin-bottom: 20px;
+
+        -webkit-transition: height 0.3s ease;
+        -moz-transition: height 0.3s ease;
+        -ms-transition: height 0.3s ease;
+        -o-transition: height 0.3s ease;
+        transition: height 0.3s ease;
+    }
+
+    #log:focus {
+        height: 100px;
+    }
+  </style>
+<style type="text/css"> [data-col="17"] { left:1765px; }
+ [data-col="16"] { left:1655px; }
+ [data-col="15"] { left:1545px; }
+ [data-col="14"] { left:1435px; }
+ [data-col="13"] { left:1325px; }
+ [data-col="12"] { left:1215px; }
+ [data-col="11"] { left:1105px; }
+ [data-col="10"] { left:995px; }
+ [data-col="9"] { left:885px; }
+ [data-col="8"] { left:775px; }
+ [data-col="7"] { left:665px; }
+ [data-col="6"] { left:555px; }
+ [data-col="5"] { left:445px; }
+ [data-col="4"] { left:335px; }
+ [data-col="3"] { left:225px; }
+ [data-col="2"] { left:115px; }
+ [data-col="1"] { left:5px; }
+ [data-row="25"] { top:1565px; }
+ [data-row="24"] { top:1500px; }
+ [data-row="23"] { top:1435px; }
+ [data-row="22"] { top:1370px; }
+ [data-row="21"] { top:1305px; }
+ [data-row="20"] { top:1240px; }
+ [data-row="19"] { top:1175px; }
+ [data-row="18"] { top:1110px; }
+ [data-row="17"] { top:1045px; }
+ [data-row="16"] { top:980px; }
+ [data-row="15"] { top:915px; }
+ [data-row="14"] { top:850px; }
+ [data-row="13"] { top:785px; }
+ [data-row="12"] { top:720px; }
+ [data-row="11"] { top:655px; }
+ [data-row="10"] { top:590px; }
+ [data-row="9"] { top:525px; }
+ [data-row="8"] { top:460px; }
+ [data-row="7"] { top:395px; }
+ [data-row="6"] { top:330px; }
+ [data-row="5"] { top:265px; }
+ [data-row="4"] { top:200px; }
+ [data-row="3"] { top:135px; }
+ [data-row="2"] { top:70px; }
+ [data-row="1"] { top:5px; }
+ [data-sizey="1"] { height:55px; }
+ [data-sizey="2"] { height:120px; }
+ [data-sizey="3"] { height:185px; }
+ [data-sizey="4"] { height:250px; }
+ [data-sizey="5"] { height:315px; }
+ [data-sizey="6"] { height:380px; }
+ [data-sizey="7"] { height:445px; }
+ [data-sizey="8"] { height:510px; }
+ [data-sizey="9"] { height:575px; }
+ [data-sizey="10"] { height:640px; }
+ [data-sizey="11"] { height:705px; }
+ [data-sizey="12"] { height:770px; }
+ [data-sizey="13"] { height:835px; }
+ [data-sizey="14"] { height:900px; }
+ [data-sizey="15"] { height:965px; }
+ [data-sizey="16"] { height:1030px; }
+ [data-sizey="17"] { height:1095px; }
+ [data-sizey="18"] { height:1160px; }
+ [data-sizey="19"] { height:1225px; }
+ [data-sizey="20"] { height:1290px; }
+ [data-sizey="21"] { height:1355px; }
+ [data-sizey="22"] { height:1420px; }
+ [data-sizey="23"] { height:1485px; }
+ [data-sizey="24"] { height:1550px; }
+ [data-sizex="1"] { width:100px; }
+ [data-sizex="2"] { width:210px; }
+ [data-sizex="3"] { width:320px; }
+ [data-sizex="4"] { width:430px; }
+ [data-sizex="5"] { width:540px; }
+ [data-sizex="6"] { width:650px; }
+ [data-sizex="7"] { width:760px; }
+ [data-sizex="8"] { width:870px; }
+ [data-sizex="9"] { width:980px; }
+ [data-sizex="10"] { width:1090px; }
+ [data-sizex="11"] { width:1200px; }
+ [data-sizex="12"] { width:1310px; }
+ [data-sizex="13"] { width:1420px; }
+ [data-sizex="14"] { width:1530px; }
+ [data-sizex="15"] { width:1640px; }
+ [data-sizex="16"] { width:1750px; }
+</style></head>
+
+<body>
+
+  
+    <div class="gridster ready">
+        <ul id="00" style="position: relative;">
+            <li id="0" data-row="1" data-col="1" data-sizex="2" data-sizey="2" class="gs-w">hellow world</li>
+            <li id="1" data-row="1" data-col="3" data-sizex="1" data-sizey="2" class="gs-w">1</li>
+            <li id="2" data-row="1" data-col="4" data-sizex="1" data-sizey="1" class="gs-w">2</li>
+            <li id="3" data-row="3" data-col="2" data-sizex="3" data-sizey="1" class="gs-w">3</li>
+
+            <li id="4" data-row="4" data-col="1" data-sizex="1" data-sizey="1" class="gs-w">4</li>
+            <li id="5"data-row="3" data-col="1" data-sizex="1" data-sizey="1" class="gs-w">5</li>
+            <li id="6" data-row="4" data-col="2" data-sizex="1" data-sizey="1" class="gs-w">6</li>
+            <li id="7" data-row="5" data-col="2" data-sizex="1" data-sizey="1" class="gs-w">7</li>
+            <li id="8" data-row="4" data-col="4" data-sizex="1" data-sizey="1" class="gs-w">8</li>
+
+            <li id="9" data-row="1" data-col="5" data-sizex="1" data-sizey="3" class="gs-w">9</li>
+
+            <li id="10" data-row="5" data-col="1" data-sizex="1" data-sizey="2" class="gs-w">10</li>
+            <li id="11" data-row="4" data-col="3" data-sizex="1" data-sizey="2" class="gs-w">11</li>
+            <li id="12" data-row="5" data-col="4" data-sizex="1" data-sizey="1" class="gs-w">12</li>
+            <li id="13" data-row="6" data-col="2" data-sizex="3" data-sizey="1" class="gs-w">13</li>
+
+            <li id="14" data-row="4" data-col="5" data-sizex="1" data-sizey="2" class="gs-w">14</li>
+            <li id="15" data-row="6" data-col="5" data-sizex="1" data-sizey="1" class="gs-w">15</li>
+
+            <li id="16" data-row="7" data-col="3" data-sizex="1" data-sizey="1" class="gs-w">16</li>
+        </ul>
+    </div>
+
+
+   
+
+    <script type="text/javascript">
+	  var gridster;
+	  
+	  gridster= $(".gridster > ul").gridster({
+		widget_margins: [3, 3],
+        widget_base_dimensions: [110, 110],
+		autogenerate_stylesheet: false,
+		avoid_overlapped_widgets: true,
+        serialize_params: function($w, wgd) 
+		{
+			return {
+				id: $($w).attr('id'),
+				col: wgd.col, 
+				row: wgd.row,
+				size_x: wgd.size_x,
+				size_y: wgd.size_y,
+				htmlContent : $($w).html(),
+
+			};//return
+		},//serialize
+		draggable: 
+		{
+				enabled:true,
+				stop: function (event, ui){
+						var s = this.serialize();
+						console.log(s);
+						var serialization = Gridster.sort_by_row_and_col_asc(s);
+						console.log(serialization);
+						var positions =  JSON.stringify(serialization);
+						console.log(positions);
+						localStorage.setItem('positions', positions);
+				},
+		},	
+		
+		}).data('gridster');
+
+
+	$('.gridster > ul').mouseup(function(){
+			
+			var bg_w = $("#00").width();
+			var bg_h = $("#00").height();
+			var bg_wh = [bg_w, bg_h];
+			var bg_size = JSON.stringify(bg_wh);
+			localStorage.setItem('bg_size',bg_size);
+			console.log(bg_size);
+			
+		
+	});
+		$(window).ready(function () {
+
+	
+	var localData = JSON.parse(localStorage.getItem('positions'));
+	//var bg_size = JSON.parse(localStorage.getItem('bg_size'));
+	
+	if(localData!=null){
+		
+		//$("#00").width(bg_size[0]);
+		//$("#00").height(bg_size[1]);
+		
+		//console.log(bg_size);
+		console.log(localData);
+		gridster.remove_all_widgets();
+	/*	var html = '<li />';
+		var size_x = 1;
+		var size_y =1;
+		var col = 5;
+		var row =2;
+		var htmlContent = 'hello world';
+	gridster.add_widget('<li />',size_x, size_y, col, row, 'hello world');
+	*/	
+	$.each(localData, function(i,value){
+	var htmlContent = value.htmlContent;
+
+	var idName = value.id;
+		
+	gridster.add_widget('<li />', this.idName, this.size_x, this.size_y, this.col, this.row, this.htmlContent);
+	/*
+    	var id_name;
+		id_name="#";
+		id_name = id_name + value.id;
+	
+			
+			$(id_name).attr({"data-row":value.row, "data-col":value.col,"data-sizex":value.size_x, "data-sizey":value.size_y});
+			
+*/
+});
+		}
+		else{
+			console.log('No data returned by the server');	
+		}
+		
+		
+		
+});
+
+	/*
+	
+		var gridster_canvas = $(".gridster > ul").gridster({
+          widget_base_dimensions: [110,110],
+          widget_margins: [3,3],
+		 // autogrow_cols: true,
+		 // max_cols: 10,
+		 // avoid_overlapped_widgets: true,
+		  serialize_params: function($w, wgd) 
+		{
+			return {
+				id: $($w).attr('id'),
+				col: wgd.col, 
+				row: wgd.row,
+				size_x: wgd.size_x,
+				size_y: wgd.size_y,
+				htmlContent : $($w).html() 
+				
+				}//return
+		},//serialize params
+        draggable:{
+			stop: function(event, ui){
+					var s = this.serialize();
+					var positions = JSON.stringify(s);
+					
+					var bg_w = $("#00").width();
+					var bg_h = $("#00").height();
+					var bg_wh = [bg_w, bg_h];
+					var bg_size = JSON.stringify(bg_wh);
+					localStorage.setItem('bg_size',bg_size);
+					localStorage.setItem('positions', positions);
+					
+			}//stop
+		},//draggable
+		resize:{
+			enabled: true
+		},//resize
+		}).data('gridster');
+		
+		
+
+   /*   $(document).ready(function(){
+
+       
+
+    $('.js-seralize').on('click', function() {
+            var s = gridster.serialize();
+			var positions = JSON.stringify(s);
+			var bg_w = $("#00").width();
+			var bg_h = $("#00").height();
+			var bg_wh = [bg_w, bg_h];
+			var bg_size = JSON.stringify(bg_wh);
+			
+			console.log(bg_size);
+			localStorage.setItem('positions', positions);
+			localStorage.setItem('bg_size',bg_size);
+            $('#log').val(JSON.stringify(s));
+			
+			});
+			
+			
+			var serialization = JSON.parse(localStorage.getItem('positions'));
+			var bg_size = JSON.parse(localStorage.getItem('bg_size'));
+			$('.js-build-seralize').on('click', function() {
+			 $('#log').val(JSON.stringify(serialization));
+			 console.log(bg_size);
+			$("#00").width(bg_size[0]);
+			$("#00").height(bg_size[1]);
+            $.each(serialization, function(i, value) {
+					var id_name;
+					id_name="#";
+					id_name = id_name + value.id;
+                $(id_name).attr({"data-col":value.col, "data-row":value.row, "data-sizex":value.size_x, "data-sizey":value.size_y});
+            });
+			
+			
+	
+	if(serialization!=null)
+		{
+	$.each(serialization, function(i,value){
+	
+    	var id_name;
+
+		id_name="#";
+		id_name = id_name + value.id;
+		console.log(id_name);
+			
+			$(id_name).attr({"data-col":value.col, "data-row":value.row, "data-sizex":value.size_x, "data-sizey":value.size_y});
+			
+
+});
+		}
+		else{
+			console.log('No data returned by the server');	
+		}
+		
+        });
+
+      });*/
+    </script>
+
+
+</body>
+</html>
